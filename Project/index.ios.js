@@ -19,45 +19,54 @@ class WYNewsRN extends Component {
     this.state = {
       menuItems: [{
         title: '新闻',
-        icon: require('./App/resources/night_tabbar_icon_news_normal.png'),
+        icon: require('./App/resources/images/night_tabbar_icon_news_normal.png'),
         highlight: 'night_tabbar_icon_news_normal',
         tag: 'news'
       },
       {
         title: '阅读',
-        icon: require('./App/resources/night_tabbar_icon_reader_normal.png'),
+        icon: require('./App/resources/images/night_tabbar_icon_reader_normal.png'),
         highlight: 'night_tabbar_icon_news_normal',
         tag: 'reading'
       },
       {
         title: '视频',
-        icon: require('./App/resources/night_tabbar_icon_media_normal.png'),
+        icon: require('./App/resources/images/night_tabbar_icon_media_normal.png'),
         highlight: 'night_tabbar_icon_news_normal',
         tag: 'media'
       },
       {
         title: '话题',
-        icon: require('./App/resources/night_tabbar_icon_bar_normal.png'),
+        icon: require('./App/resources/images/night_tabbar_icon_bar_normal.png'),
         highlight: 'night_tabbar_icon_news_normal',
         tag: 'bar'
       },
       {
         title: '我',
-        icon: require('./App/resources/night_tabbar_icon_me_normal.png'),
+        icon: require('./App/resources/images/night_tabbar_icon_me_normal.png'),
         highlight: 'night_tabbar_icon_news_normal',
         tag: 'me'
       }],
-      selectedTag: 'news'
+      selectedTag: ''
     };
+    this.state.selectedTag = this.state.menuItems[0].tag;
   }
   render() {
     var items = this.state.menuItems.map((itemValue) => {
       return (
         <TabBarIOS.Item
         key = {itemValue.tag}
+        selected = {this.state.selectedTag === itemValue.tag}
         title = {itemValue.title}
         icon = {itemValue.icon}
+        onPress = {() => {
+          this.setState({
+            selectedTag: itemValue.tag
+          });
+        }}
         >
+        <View style = {{flex: 1, backgroundColor: 'red'}}>
+        </View>
         </TabBarIOS.Item>
       )
     });

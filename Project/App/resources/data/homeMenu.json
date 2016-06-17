@@ -1,0 +1,36 @@
+{
+  "menuItems": [{
+    "title": "新闻",
+    "icon": "night_tabbar_icon_news_normal.png",
+    "highlight": "night_tabbar_icon_bar_normal.png",
+    "backgroundColor": "#ff0000",
+    "tag": "news"
+  },
+  {
+    "title": "阅读",
+    "icon": "night_tabbar_icon_reader_normal.png",
+    "highlight": "night_tabbar_icon_bar_normal.png",
+    "backgroundColor": "white",
+    "tag": "reading"
+  },
+  {
+    "title": "视频",
+    "icon": "night_tabbar_icon_media_normal.png",
+    "highlight": "night_tabbar_icon_bar_normal.png",
+    "backgroundColor": "blue",
+    "tag": "media"
+  },
+  {
+    "title": "话题",
+    "icon": "night_tabbar_icon_bar_normal.png",
+    "highlight": "night_tabbar_icon_bar_normal.png",
+    "backgroundColor": "yeallow",
+    "tag": "bar"
+  },
+  {
+    "title": "我",
+    "icon": "night_tabbar_icon_me_normal.png",
+    "highlight": "night_tabbar_icon_bar_normal.png",
+    "tag": "me"
+  }]
+};
